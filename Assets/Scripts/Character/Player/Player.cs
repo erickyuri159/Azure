@@ -81,7 +81,7 @@ public class Player : Character
     {
         GetAnimator().SetBool("Death", true);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.6f);
 
         GameOverWindow.SetActive(true);
         Time.timeScale = 0f;
