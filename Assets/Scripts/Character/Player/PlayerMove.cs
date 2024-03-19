@@ -87,7 +87,7 @@ public class PlayerMove : MonoBehaviour
 
             // mover
 
-            transform.position = Vector3.MoveTowards(transform.position, PosTelaCorrigida, 0.01f);
+            transform.position = Vector3.MoveTowards(transform.position, PosTelaCorrigida, 0.1f);
         }
         else 
         {
