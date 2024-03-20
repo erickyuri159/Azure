@@ -76,7 +76,7 @@ public class PlayerMove : MonoBehaviour
 
             //transformar posição tela 
             Vector3 PosTela = Camera.main.ScreenToWorldPoint(destino);
-            Vector3 PosTelaCorrigida = new Vector3(PosTela.x, PosTela.y + 0.5f, 0);
+            Vector3 PosTelaCorrigida = new Vector3(PosTela.x, PosTela.y + 2.5f, 0);
 
             direcaoPlayer = PosTelaCorrigida - transform.position;
 
@@ -87,7 +87,7 @@ public class PlayerMove : MonoBehaviour
 
             // mover
 
-            transform.position = Vector3.MoveTowards(transform.position, PosTelaCorrigida, 0.1f);
+            transform.position = Vector3.MoveTowards(transform.position, PosTelaCorrigida, 0.04f);
         }
         else 
         {
