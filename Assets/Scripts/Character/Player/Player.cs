@@ -12,6 +12,7 @@ public class Player : Character
     float expAdditional;
     int luck;
     bool isColliding;
+    public bool morto= false ;
 
     private Player() { }
 
@@ -73,12 +74,15 @@ public class Player : Character
 
     public override void Die()
     {
+        morto = true;
         PlayerMove.GetInstance().isDead = true;
         StartCoroutine(DieAnimation());
+        
     }
 
     protected override IEnumerator DieAnimation()
     {
+
         GetAnimator().SetBool("Death", true);
 
         yield return new WaitForSeconds(1.6f);

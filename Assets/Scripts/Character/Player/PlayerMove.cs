@@ -36,7 +36,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (!PauseMenu.isPaused)
         {
-            FixedUpdate();
+           
 
             if (!Level.GetIsLevelUpTime())
             {
@@ -54,10 +54,11 @@ public class PlayerMove : MonoBehaviour
 
 
 
-                if (!isDead)
+                if (!character.morto)
             {
                 transform.Translate(Vector2.right * horizontal * character.GetSpeed() / 10f * Time.deltaTime);
                 transform.Translate(Vector2.up * vertical * character.GetSpeed() / 10f * Time.deltaTime);
+                
             }
         }
     }
@@ -95,9 +96,13 @@ public class PlayerMove : MonoBehaviour
             animator.SetFloat("horizontalidle", direcaoPlayer.x);
             animator.SetFloat("verticalidle", direcaoPlayer.y);
         }
+        if (!character.morto)
+        {
+            Playerbody2D.MovePosition(Playerbody2D.position + direcaoPlayer * moveSpeed * Time.fixedDeltaTime);
+        }
 
 
-         Playerbody2D.MovePosition(Playerbody2D.position + direcaoPlayer * moveSpeed * Time.fixedDeltaTime);
+           
     }
 
     public static PlayerMove GetInstance()
