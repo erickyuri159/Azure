@@ -8,14 +8,15 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] TextMeshProUGUI killCountText;
     static EnemySpawner instance;
-    List<GameObject> enemyList = new List<GameObject>(500);
+    public List<GameObject> enemyList = new List<GameObject>(500);
     const float maxX = 10;
     const float maxY = 16;
     const float DecreseSpawnDelayTime = 0.8f;
     float spawnDelay;
     int stage;
     int killCount;
-
+    public List<GameObject> listaMonstro;
+    public int QuantidadeInimigos;
     private EnemySpawner() { }
     
     enum Direction
@@ -47,42 +48,59 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator SpawnEnemy()
     {
-        GameObject newEnemy;
+        
 
-        while (true)
-        {
-            switch (stage)
+
+            GameObject newEnemy= null;
+
+            while (true)
             {
-                default:
-                case 1:
-                    newEnemy = ObjectPooling.GetObject(CharacterData.CharacterType.FlyingEye);
+                switch (stage)
+                {
+                    default:
+                    case 1:
+                    if (QuantidadeInimigos < 100)
+                    {
+                        newEnemy = ObjectPooling.GetObject(CharacterData.CharacterType.FlyingEye);
+                        listaMonstro.Add(newEnemy);
+                        QuantidadeInimigos++;
+                    }
+                        break;
+                    case 2:
+                        newEnemy = ObjectPooling.GetObject(CharacterData.CharacterType.Goblin);
+                        listaMonstro.Add(newEnemy);
+                    QuantidadeInimigos++;
                     break;
-                case 2:
-                    newEnemy = ObjectPooling.GetObject(CharacterData.CharacterType.Goblin);
+                    case 3:
+                        newEnemy = ObjectPooling.GetObject(CharacterData.CharacterType.Mushroom);
+                        listaMonstro.Add(newEnemy);
+                    QuantidadeInimigos++;
                     break;
-                case 3:
-                    newEnemy = ObjectPooling.GetObject(CharacterData.CharacterType.Mushroom);
+                    case 4:
+                    case 5:
+                        newEnemy = ObjectPooling.GetObject(CharacterData.CharacterType.Skeleton);
+                        listaMonstro.Add(newEnemy);
+                    QuantidadeInimigos++;
                     break;
-                case 4:
-                case 5:
-                    newEnemy = ObjectPooling.GetObject(CharacterData.CharacterType.Skeleton);
-                    break;
-            }
+                }
 
-            newEnemy.transform.position = RandomPosition();
-            newEnemy.SetActive(true);
-            enemyList.Add(newEnemy);
-
-            if(stage == 5)
-            {
-                newEnemy = ObjectPooling.GetObject(CharacterData.CharacterType.FlyingEye);
                 newEnemy.transform.position = RandomPosition();
                 newEnemy.SetActive(true);
                 enemyList.Add(newEnemy);
-            }
+              
 
-            yield return new WaitForSeconds(spawnDelay);
-        }
+            if (stage == 5)
+                {
+                    newEnemy = ObjectPooling.GetObject(CharacterData.CharacterType.FlyingEye);
+                    newEnemy.transform.position = RandomPosition();
+                    newEnemy.SetActive(true);
+                    enemyList.Add(newEnemy);
+                }
+
+                yield return new WaitForSeconds(spawnDelay);
+            }
+        
+
     }
 
     Vector3 RandomPosition()
@@ -167,6 +185,7 @@ public class EnemySpawner : MonoBehaviour
     {
         ++killCount;
 
+        QuantidadeInimigos--;
         killCountText.text = killCount.ToString();
     }
 

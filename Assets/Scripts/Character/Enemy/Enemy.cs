@@ -108,9 +108,9 @@ public class Enemy : Character
 
         ObjectPooling.ReturnObject(gameObject, GetCharacterType());
         GameObject exp = Instantiate(Explosao, transform.position, Quaternion.identity);
-        //destroy explosao
+        
         Destroy(exp, 3f);
-        //destroy asteroid
+        
         gameObject.SetActive(false);
        
     }

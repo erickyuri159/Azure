@@ -22,7 +22,7 @@ public class ObjectPooling : MonoBehaviour
     [SerializeField] GameObject redCrystalPrefab;
 
     [SerializeField] GameObject DamageText;
-
+    
     static ObjectPooling instance;
     Dictionary<string, Queue<GameObject>> poolingDict = new Dictionary<string, Queue<GameObject>>();
 
@@ -30,6 +30,7 @@ public class ObjectPooling : MonoBehaviour
     const int initNumWeapon = 500;
     const int initNumCrystal = 500;
     const int initNumDamage = 500;
+    
 
     void Awake()
     {
@@ -97,6 +98,8 @@ public class ObjectPooling : MonoBehaviour
             default:
             case CharacterData.CharacterType.FlyingEye:
                 newObject = Instantiate(instance.flyingEyePrefab);
+
+                
                 break;
             case CharacterData.CharacterType.Goblin:
                 newObject = Instantiate(instance.goblinPrefab);
