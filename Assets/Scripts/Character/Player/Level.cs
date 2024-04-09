@@ -135,7 +135,7 @@ public class Level : MonoBehaviour
 
         for (int i = 0; i < slotNum; i++)
         {
-            if (Random.Range(0, 10) < 4)    // ¹«±â
+            if (Random.Range(0, 10) < 4)    // 
             {
                 WeaponData.WeaponType weapon;
 
@@ -164,7 +164,7 @@ public class Level : MonoBehaviour
                     isLevelUpTime = false; 
                 });
             }
-            else  // ¾Ç¼¼
+            else  // 
             {
                 AccessoryData.AccessoryType accessory;
                 

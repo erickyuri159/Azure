@@ -12,4 +12,6 @@ public class Bible : Weapon
         transform.RotateAround(player.transform.position, new Vector3(0f, 0f, 1f), speed * Time.deltaTime);
         transform.Rotate(new Vector3(0f, 0f, -1f), speed * Time.deltaTime);
     }
+
+    
 }

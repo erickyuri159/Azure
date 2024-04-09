@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Lightning : Weapon
 {
+    
+
     void OnEnable()
     {
         StartCoroutine(StartDestroy());

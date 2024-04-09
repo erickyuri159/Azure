@@ -8,6 +8,8 @@ public class MagicWand : Weapon
     [SerializeField]Rigidbody2D rigidbody;
     float speed = 300;
 
+   
+
     void OnEnable()
     {
         StartCoroutine(StartDestroy());
