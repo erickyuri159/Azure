@@ -49,7 +49,7 @@ public class Timer : MonoBehaviour
             else
                 timeText.text = minute.ToString() + " : " + second.ToString();
 
-            if (minute >= 10)
+            if (minute >= 30)
             {
                 GameOverWindow.SetActive(true);
                 Time.timeScale = 0f;
