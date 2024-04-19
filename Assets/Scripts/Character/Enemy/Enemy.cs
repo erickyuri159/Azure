@@ -11,6 +11,7 @@ public class Enemy : Character
     EnemyMove enemyMove;
     Rigidbody2D rigidbody;
     public GameObject Explosao;
+    public GameObject Moeda;
 
     void Awake()
     {
@@ -112,6 +113,7 @@ public class Enemy : Character
         Destroy(exp, 3f);
         
         gameObject.SetActive(false);
-       
+        GameObject moeda = Instantiate(Moeda, transform.position, Quaternion.identity);
+        Destroy(moeda, 30f);
     }
 }

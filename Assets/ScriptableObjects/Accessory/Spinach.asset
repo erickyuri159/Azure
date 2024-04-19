@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Spinach
   m_EditorClassIdentifier: 
   accessoryType: 0
-  accessorySprite: {fileID: 21300000, guid: cd1b3a03734a85346b40ee2c8ff6f21f, type: 3}
+  accessorySprite: {fileID: 1122117815, guid: 3b3443995bb1f62439b43ad001f69b6c, type: 3}
   description: Aumenta o dano infligido em 10%

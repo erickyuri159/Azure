@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Weapon
   - Arma
+  - AtkInimigo
+  - moeda
   layers:
   - Default
   - TransparentFX

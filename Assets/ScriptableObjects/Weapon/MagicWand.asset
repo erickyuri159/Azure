@@ -17,7 +17,7 @@ MonoBehaviour:
   attackPower: 10
   attackSpeed: 1.5
   inactiveDelay: 3
-  weaponSprite: {fileID: 21300000, guid: 69e29003cde6e7340a6fb22a30653937, type: 3}
+  weaponSprite: {fileID: 467351109, guid: 3b3443995bb1f62439b43ad001f69b6c, type: 3}
   description: "Atira no inimigo mais pr\xF3ximo"
   basePosition: {x: 0, y: 0.5}
   baseScale: {x: 1.5, y: 1.5}

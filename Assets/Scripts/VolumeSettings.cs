@@ -10,6 +10,7 @@ public class VolumeSettings : MonoBehaviour
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider SFXSlider;
 
+
     private void Start()
     {
         if (PlayerPrefs.HasKey("musicVolume"))

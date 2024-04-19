@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Clover
   m_EditorClassIdentifier: 
   accessoryType: 4
-  accessorySprite: {fileID: 21300000, guid: c40fe81f68580e1428c9bbbb9f59da81, type: 3}
+  accessorySprite: {fileID: -891398715, guid: 3b3443995bb1f62439b43ad001f69b6c, type: 3}
   description: Personagem tem 20% mais sorte em Cristal
