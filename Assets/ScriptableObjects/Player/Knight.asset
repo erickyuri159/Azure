@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: -1050692463, guid: fe748da618f3b354f87b2e7d08a8d073, type: 3}
   controller: {fileID: 9100000, guid: a6c0077be11b8d64b95b5b33fc8ebf1b, type: 2}
-  characterType: 4
+  characterType: 5
   healthPoint: 800
   attackPower: 100
   defencePower: 0

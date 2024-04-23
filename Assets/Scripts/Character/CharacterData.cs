@@ -17,6 +17,7 @@ public class CharacterData : ScriptableObject
         Goblin,
         Skeleton,
         Mushroom,
+        Boss,
         Knight,
         Bandit
     }

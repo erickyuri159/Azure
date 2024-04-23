@@ -9,6 +9,7 @@ public class ObjectPooling : MonoBehaviour
     [SerializeField] GameObject goblinPrefab;
     [SerializeField] GameObject mushroomPrefab;
     [SerializeField] GameObject skeletonPrefab;
+    [SerializeField] GameObject BossPrefab;
 
     [SerializeField] GameObject whipPrefab;
     [SerializeField] GameObject biblePrefab;
@@ -110,7 +111,9 @@ public class ObjectPooling : MonoBehaviour
             case CharacterData.CharacterType.Skeleton:
                 newObject = Instantiate(instance.skeletonPrefab);
                 break;
-
+            case CharacterData.CharacterType.Boss:
+                newObject = Instantiate(instance.BossPrefab);
+                break;
             case WeaponData.WeaponType.Whip:
                 newObject = Instantiate(instance.whipPrefab);
                 if(ItemAssets.GetInstance().GetWeaponData(WeaponData.WeaponType.Whip).GetParent().Equals(WeaponData.Parent.Player))

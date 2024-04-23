@@ -82,7 +82,12 @@ public class EnemySpawner : MonoBehaviour
                         listaMonstro.Add(newEnemy);
                     QuantidadeInimigos++;
                     break;
-                }
+                case 6:
+                    newEnemy = ObjectPooling.GetObject(CharacterData.CharacterType.Boss);
+                    listaMonstro.Add(newEnemy);
+                    QuantidadeInimigos++;
+                    break;
+            }
 
                 newEnemy.transform.position = RandomPosition();
                 newEnemy.SetActive(true);
