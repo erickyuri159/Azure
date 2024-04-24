@@ -112,7 +112,7 @@ public class ObjectPooling : MonoBehaviour
                 newObject = Instantiate(instance.skeletonPrefab);
                 break;
             case CharacterData.CharacterType.Boss:
-                newObject = Instantiate(instance.BossPrefab);
+                newObject = Instantiate(instance.BossPrefab); 
                 break;
             case WeaponData.WeaponType.Whip:
                 newObject = Instantiate(instance.whipPrefab);

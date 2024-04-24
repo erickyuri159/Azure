@@ -111,9 +111,16 @@ public class Enemy : Character
         GameObject exp = Instantiate(Explosao, transform.position, Quaternion.identity);
         
         Destroy(exp, 3f);
-        
+
+        if (base.GetCharacterType() == CharacterData.CharacterType.Boss) 
+        { 
+              //  GameObject moeda = Instantiate(Moeda, transform.position, Quaternion.identity);
+       // Destroy(moeda, 30f);
+        }
+
+
         gameObject.SetActive(false);
-        GameObject moeda = Instantiate(Moeda, transform.position, Quaternion.identity);
-        Destroy(moeda, 30f);
+
+
     }
 }

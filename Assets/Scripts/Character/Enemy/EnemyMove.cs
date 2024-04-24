@@ -11,6 +11,12 @@ public class EnemyMove : MonoBehaviour
     public bool isDead;
     Vector2 direction;
 
+    private void Start()
+    {
+        if (player == null)
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     void Awake()
     {
         Initialize();
