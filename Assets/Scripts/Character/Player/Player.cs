@@ -13,16 +13,19 @@ public class Player : Character
     int luck;
     bool isColliding;
     public bool morto = false;
-   
+    private ControladorJogo CJ;
 
     private Player() { }
 
     void Awake()
     {
+        CJ = GameObject.FindGameObjectWithTag("GameController").
+                GetComponent<ControladorJogo>();
         Initialize();
 
     }
-    
+
+
 
     protected override void Initialize()
     {
@@ -136,5 +139,14 @@ public class Player : Character
         spriteRenderer.color = Color.white;
         hitCoroutine = null;
     }
-    
+    private void OnTriggerEnter2D(Collider2D colidiu)
+    {
+        if (colidiu.gameObject.tag == "moeda")
+        {
+
+            Destroy(colidiu.gameObject);
+            CJ.GanhaMoedas(5);
+        }
+
+    }
 }

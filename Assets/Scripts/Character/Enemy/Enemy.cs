@@ -113,9 +113,12 @@ public class Enemy : Character
         Destroy(exp, 3f);
 
         if (base.GetCharacterType() == CharacterData.CharacterType.Boss) 
-        { 
-              //  GameObject moeda = Instantiate(Moeda, transform.position, Quaternion.identity);
-       // Destroy(moeda, 30f);
+        {
+            GameObject moeda = Instantiate(Moeda, transform.position, Quaternion.identity);
+            //destroy explosao
+            Destroy(moeda, 5f);
+            //destroy asteroid
+           // Destroy(gameObject);
         }
 
 

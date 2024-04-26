@@ -17,6 +17,8 @@ public class EnemySpawner : MonoBehaviour
     int killCount;
     public List<GameObject> listaMonstro;
     public int QuantidadeInimigos;
+    GameObject newEnemy = null;
+    int spawnedBosses = 0;
     private EnemySpawner() { }
     
     enum Direction
@@ -83,9 +85,18 @@ public class EnemySpawner : MonoBehaviour
                     QuantidadeInimigos++;
                     break;
                 case 1:
-                    newEnemy = ObjectPooling.GetObject(CharacterData.CharacterType.Boss);
-                    listaMonstro.Add(newEnemy);
-                    QuantidadeInimigos++;
+                    if (spawnedBosses < 15)
+                    {
+                        newEnemy = ObjectPooling.GetObject(CharacterData.CharacterType.Boss);
+                        listaMonstro.Add(newEnemy);
+                        QuantidadeInimigos++;
+                        spawnedBosses++;
+                    }
+                   /* else
+                    {
+                        // Saia do loop ou faça qualquer outra limpeza necessária
+                        yield break;
+                    }*/
                     break;
             }
 
