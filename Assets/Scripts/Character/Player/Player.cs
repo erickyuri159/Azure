@@ -13,7 +13,7 @@ public class Player : Character
     int luck;
     bool isColliding;
     public bool morto = false;
-    private ControladorJogo CJ;
+    public ControladorJogo CJ;
 
     private Player() { }
 
@@ -139,14 +139,19 @@ public class Player : Character
         spriteRenderer.color = Color.white;
         hitCoroutine = null;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "moeda") 
+        {
+            CJ.GanhaMoedas(1);
+            Destroy(collision.gameObject);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D colidiu)
     {
-        if (colidiu.gameObject.tag == "moeda")
-        {
 
-            Destroy(colidiu.gameObject);
-            CJ.GanhaMoedas(5);
-        }
 
     }
 }

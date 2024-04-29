@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5692423759573322012}
   m_Layer: 0
   m_Name: RedCrystal
-  m_TagString: moeda
+  m_TagString: crystal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

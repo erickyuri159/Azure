@@ -9,6 +9,8 @@ TagManager:
   - AtkInimigo
   - moeda
   - Ima
+  - Boss
+  - crystal
   layers:
   - Default
   - TransparentFX

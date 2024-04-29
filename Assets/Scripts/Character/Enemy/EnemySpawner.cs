@@ -60,7 +60,7 @@ public class EnemySpawner : MonoBehaviour
                 switch (stage)
                 {
                     default:
-                    case 6:
+                    case 1:
                     if (QuantidadeInimigos < 100)
                     {
                         newEnemy = ObjectPooling.GetObject(CharacterData.CharacterType.FlyingEye);
@@ -84,26 +84,35 @@ public class EnemySpawner : MonoBehaviour
                         listaMonstro.Add(newEnemy);
                     QuantidadeInimigos++;
                     break;
-                case 1:
+                case 6:
                     if (spawnedBosses < 15)
                     {
                         newEnemy = ObjectPooling.GetObject(CharacterData.CharacterType.Boss);
                         listaMonstro.Add(newEnemy);
                         QuantidadeInimigos++;
                         spawnedBosses++;
+                        newEnemy.transform.position = RandomPosition();
+                        newEnemy.SetActive(true);
+                        enemyList.Add(newEnemy);
                     }
-                   /* else
+                    if (QuantidadeInimigos <= 0)
                     {
-                        // Saia do loop ou faça qualquer outra limpeza necessária
-                        yield break;
-                    }*/
+                        stage = 1;
+                    }
+                    /*else
+                     {
+                         // Saia do loop ou faça qualquer outra limpeza necessária
+                         yield break;
+                     }*/
                     break;
             }
 
+            if(stage != 6) { 
                 newEnemy.transform.position = RandomPosition();
                 newEnemy.SetActive(true);
                 enemyList.Add(newEnemy);
-              
+            }
+
 
             if (stage == 6)
                 {

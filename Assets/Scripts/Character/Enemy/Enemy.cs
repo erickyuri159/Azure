@@ -6,12 +6,13 @@ using UnityEngine;
 public class Enemy : Character
 {
     [SerializeField] CrystalData.CrystalType crystalType;
+    [SerializeField] GameObject moedaPrefab;
     Shader shaderGUItext;
     Shader shaderSpritesDefault;
     EnemyMove enemyMove;
     Rigidbody2D rigidbody;
     public GameObject Explosao;
-    public GameObject Moeda;
+    //public GameObject Moeda;
 
     void Awake()
     {
@@ -79,8 +80,12 @@ public class Enemy : Character
     {
         EnemySpawner.GetInstance().IncreaseKillCount();
 
-        if (Random.Range(0, 10) > 5)
+        int rand = Random.Range(0, 10);
+
+        if (rand > 5) { 
             DropCrystral();
+        }
+            
 
         StartCoroutine(DieAnimation());
     }
@@ -112,11 +117,11 @@ public class Enemy : Character
         
         Destroy(exp, 3f);
 
-        if (base.GetCharacterType() == CharacterData.CharacterType.Boss) 
+       if (base.GetCharacterType() == CharacterData.CharacterType.Boss) 
         {
-            GameObject moeda = Instantiate(Moeda, transform.position, Quaternion.identity);
+            GameObject moeda = Instantiate(moedaPrefab, transform.position, Quaternion.identity);
             //destroy explosao
-            Destroy(moeda, 5f);
+            //Destroy(moeda, 5f);
             //destroy asteroid
            // Destroy(gameObject);
         }
