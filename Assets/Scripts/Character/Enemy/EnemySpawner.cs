@@ -95,7 +95,7 @@ public class EnemySpawner : MonoBehaviour
                         newEnemy.SetActive(true);
                         enemyList.Add(newEnemy);
                     }
-                    if (QuantidadeInimigos <= 0)
+                    if (QuantidadeInimigos <= 1)
                     {
                         stage = 1;
                     }

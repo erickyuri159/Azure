@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class Player : Character
 {
@@ -14,14 +16,46 @@ public class Player : Character
     bool isColliding;
     public bool morto = false;
     public ControladorJogo CJ;
+    public List<Sprite> Roupinhas;
+    public Animator Anim;
 
     private Player() { }
 
     void Awake()
     {
+        string RoupaAtual = PlayerPrefs.GetString("RoupaEscolhido");
         CJ = GameObject.FindGameObjectWithTag("GameController").
                 GetComponent<ControladorJogo>();
+        Anim = GetComponent<Animator>();
         Initialize();
+
+    }
+    private void Update()
+    {
+        EscolherLagarto();
+    }
+    public void EscolherLagarto()
+    {
+        string RoupaAtual = PlayerPrefs.GetString("RoupaEscolhido");
+        
+
+        if (RoupaAtual == "0")
+        {
+            //GetComponent<SpriteRenderer>().sprite = Lagartos[0];
+            Anim.SetInteger("Roupa", 0);
+
+        }
+
+        //Roupa azul
+
+        if (RoupaAtual == "1")
+        {
+            GetComponent<SpriteRenderer>().sprite = Roupinhas[1];
+            Anim.SetInteger("Roupa", 1);
+        }
+
+        
+       
 
     }
 
