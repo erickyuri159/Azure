@@ -41,15 +41,16 @@ public class PlayerMove : MonoBehaviour
             if (!Level.GetIsLevelUpTime())
             {
                 direcaoPlayer = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-                /*animator.SetFloat("horizontal", direcaoPlayer.x);
+               /* animator.SetFloat("horizontal", direcaoPlayer.x);
                 animator.SetFloat("vertical", direcaoPlayer.y);
                 animator.SetFloat("velocidade", direcaoPlayer.sqrMagnitude);*/
             }
 
             if (direcaoPlayer != Vector2.zero)
             {
-                /*animator.SetFloat("horizontalidle", direcaoPlayer.x);
-                animator.SetFloat("verticalidle", direcaoPlayer.y);*/
+                animator.SetFloat("horizontal", direcaoPlayer.x);
+                animator.SetFloat("vertical", direcaoPlayer.y);
+                animator.SetFloat("velocidade", direcaoPlayer.sqrMagnitude);
             }
 
 

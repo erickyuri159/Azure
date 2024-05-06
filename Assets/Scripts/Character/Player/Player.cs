@@ -18,6 +18,7 @@ public class Player : Character
     public ControladorJogo CJ;
     public List<Sprite> Roupinhas;
     public Animator Anim;
+    int roupinha;
 
     private Player() { }
 
@@ -30,36 +31,17 @@ public class Player : Character
         Initialize();
 
     }
+
+    private void Start()
+    {
+        roupinha = PlayerPrefs.GetInt("Roupinha");
+        Anim.SetInteger("Roupinha", roupinha);
+    }
+
     private void Update()
     {
-        EscolherLagarto();
-    }
-    public void EscolherLagarto()
-    {
-        string RoupaAtual = PlayerPrefs.GetString("RoupaEscolhido");
-        
-
-        if (RoupaAtual == "0")
-        {
-            //GetComponent<SpriteRenderer>().sprite = Lagartos[0];
-            Anim.SetInteger("Roupa", 0);
-
-        }
-
-        //Roupa azul
-
-        if (RoupaAtual == "1")
-        {
-            GetComponent<SpriteRenderer>().sprite = Roupinhas[1];
-            Anim.SetInteger("Roupa", 1);
-        }
-
-        
-       
 
     }
-
-
 
     protected override void Initialize()
     {

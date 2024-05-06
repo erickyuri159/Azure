@@ -59,4 +59,10 @@ public class MeuBotaoCompra : MonoBehaviour
 
         }
     }
+
+    public void MudarRoupinha(int NumeroRoupinha)
+    {
+        PlayerPrefs.SetInt("Roupinha", NumeroRoupinha);
+    }
+
 }
