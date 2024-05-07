@@ -34,6 +34,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        Time.timeScale = 1;
         if (!PauseMenu.isPaused)
         {
            

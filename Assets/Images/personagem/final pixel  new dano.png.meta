@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 52
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,12 +139,12 @@ TextureImporter:
       name: final pixel  new dano_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 12
+        y: 200
+        width: 30
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,12 +160,12 @@ TextureImporter:
       name: final pixel  new dano_1
       rect:
         serializedVersion: 2
-        x: 62
-        y: 192
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 72
+        y: 202
+        width: 36
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: final pixel  new dano_2
       rect:
         serializedVersion: 2
-        x: 124
-        y: 192
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 138
+        y: 202
+        width: 38
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,12 +202,12 @@ TextureImporter:
       name: final pixel  new dano_3
       rect:
         serializedVersion: 2
-        x: 186
-        y: 192
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 198
+        y: 204
+        width: 46
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,12 +223,12 @@ TextureImporter:
       name: final pixel  new dano_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 12
+        y: 136
+        width: 32
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,12 +244,12 @@ TextureImporter:
       name: final pixel  new dano_5
       rect:
         serializedVersion: 2
-        x: 62
-        y: 128
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 74
+        y: 138
+        width: 38
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,12 +265,12 @@ TextureImporter:
       name: final pixel  new dano_6
       rect:
         serializedVersion: 2
-        x: 124
-        y: 128
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 138
+        y: 140
+        width: 38
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,12 +286,12 @@ TextureImporter:
       name: final pixel  new dano_7
       rect:
         serializedVersion: 2
-        x: 186
-        y: 128
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 198
+        y: 140
+        width: 46
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,12 +307,12 @@ TextureImporter:
       name: final pixel  new dano_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 10
+        y: 70
+        width: 28
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,12 +328,12 @@ TextureImporter:
       name: final pixel  new dano_9
       rect:
         serializedVersion: 2
-        x: 62
-        y: 64
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 66
+        y: 70
+        width: 40
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -349,12 +349,12 @@ TextureImporter:
       name: final pixel  new dano_10
       rect:
         serializedVersion: 2
-        x: 124
-        y: 64
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 138
+        y: 68
+        width: 46
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,12 +370,12 @@ TextureImporter:
       name: final pixel  new dano_11
       rect:
         serializedVersion: 2
-        x: 186
+        x: 196
         y: 64
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -391,12 +391,12 @@ TextureImporter:
       name: final pixel  new dano_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8
+        y: 6
+        width: 26
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -412,12 +412,12 @@ TextureImporter:
       name: final pixel  new dano_13
       rect:
         serializedVersion: 2
-        x: 62
-        y: 0
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 70
+        y: 6
+        width: 40
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -433,12 +433,12 @@ TextureImporter:
       name: final pixel  new dano_14
       rect:
         serializedVersion: 2
-        x: 124
-        y: 0
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 130
+        y: 10
+        width: 46
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -454,12 +454,12 @@ TextureImporter:
       name: final pixel  new dano_15
       rect:
         serializedVersion: 2
-        x: 186
-        y: 0
-        width: 62
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 190
+        y: 6
+        width: 48
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
